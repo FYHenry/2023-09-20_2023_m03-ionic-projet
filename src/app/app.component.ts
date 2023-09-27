@@ -1,14 +1,11 @@
 import { Component } from '@angular/core';
+import { pages } from './shared/pages';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  public appPages = [
-    { title: 'Conférence', url: '/folder/conference', icon: 'clipboard' },
-    { title: 'Session', url: '/folder/session', icon: 'list' },
-    { title: 'Présentateur', url: '/folder/presentateur', icon: 'person' }
-  ];
+  public appPages = pages;
   constructor() {}
 }
