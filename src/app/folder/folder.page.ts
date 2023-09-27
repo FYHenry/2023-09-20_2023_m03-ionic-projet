@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { pages } from '../shared/pages';
+import { ApiService } from '../shared/services/api.service';
 
 @Component({
   selector: 'app-folder',
@@ -10,7 +11,8 @@ import { pages } from '../shared/pages';
 export class FolderPage implements OnInit {
   private _folder: string = '';
   private _folderTitle: string = '';
-  constructor(private _activatedRoute: ActivatedRoute) {}
+  constructor(private _activatedRoute: ActivatedRoute,
+    private _apiService: ApiService) {}
 
   private get _isRecordedFolder(): boolean{
     const folders: string[] = pages.map((item)=>item.folder);
@@ -30,6 +32,12 @@ export class FolderPage implements OnInit {
       title = this._folderTitle;
     }
     return title;
+  }
+
+  public get conferenceDates(): string{
+
+    return this._apiService.scheduleDates.begin + ' – ' +
+      this._apiService.scheduleDates.end;
   }
 
   ngOnInit() {

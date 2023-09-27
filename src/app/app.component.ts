@@ -6,6 +6,7 @@ import { pages } from './shared/pages';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  public appPages = pages;
+  public readonly appPages = pages;
+  
   constructor() {}
 }
