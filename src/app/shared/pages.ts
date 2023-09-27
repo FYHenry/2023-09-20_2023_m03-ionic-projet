@@ -1,7 +1,7 @@
 export const pages = [
     { 
       title: 'Conférence',
-      url: '/folder/conference',
+      url: '/conference',
       folder: 'conference',
       icon: 'clipboard'
     },

@@ -1,25 +1,25 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { FolderPage } from './folder/folder.page';
+import { ConferenceComponent } from './conference/conference.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/conference',
+    redirectTo: 'conference',
     pathMatch: 'full'
   },
   {
     path: 'folder',
-    redirectTo: 'folder/conference',
+    redirectTo: 'conference',
     pathMatch: 'full'
   },
   {
     path: 'folder/:id',
-    component: FolderPage
+    component: ConferenceComponent
   },
   {
     path: '**',
-    redirectTo: 'folder/conference',
+    redirectTo: 'conference',
     pathMatch: 'full'
   }
 ];

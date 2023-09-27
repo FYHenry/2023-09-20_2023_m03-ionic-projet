@@ -7,10 +7,11 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { FolderPage } from './folder/folder.page';
+import { ConferenceComponent } from './conference/conference.component';
+import { ListComponent } from './list/list.component';
 
 @NgModule({
-  declarations: [AppComponent, FolderPage],
+  declarations: [AppComponent, ConferenceComponent, ListComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

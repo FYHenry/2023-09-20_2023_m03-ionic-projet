@@ -5,10 +5,10 @@ import { ApiService } from '../shared/services/api.service';
 
 @Component({
   selector: 'app-folder',
-  templateUrl: './folder.page.html',
-  styleUrls: ['./folder.page.scss'],
+  templateUrl: './conference.component.html',
+  styleUrls: ['./conference.component.scss'],
 })
-export class FolderPage implements OnInit {
+export class ConferenceComponent implements OnInit {
   private _folder: string = '';
   private _folderTitle: string = '';
   constructor(private _activatedRoute: ActivatedRoute,
@@ -45,7 +45,7 @@ export class FolderPage implements OnInit {
       this._activatedRoute.snapshot.paramMap.get('id') as string;
 
     if(! this._isRecordedFolder){
-      window.location.pathname = '/folder/conference';
+      window.location.pathname = '/conference';
     }else{
       let foundTitle =
         pages.find(item => item.folder === this._folder)?.title;
